@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Начисленно <input type="number" id="Accrued"  value=""> <br>
+    Удержанно <input type="number" id="Held" value=""> <br>
+    Итого <input type="number" id="Result"  value=""> <br>
+    <input type="button" value="Подсчитать" id="result"> <br><br>  
+    <input type="button" value="Back" id="back"><br><br><br>
+   <a href="" id="pd">Отменено событие по умолчанию</a>
+    <script>
+        document.querySelector("input[id='result']").onclick=function(){
+            Result.value= Math.abs(Accrued.value - Held.value);
+        };
+        document.querySelector("input[id='back']").onclick=function(){
+            history.back();
+        };
+        document.querySelector("input[id='pd']").onclick=function(){
+            event.preventDefault();
+        };    
+    </script>
+</body>
+</html>

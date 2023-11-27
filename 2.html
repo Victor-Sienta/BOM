@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Information about screen" id="btn"> <br>
+    Разрешение по ширине <input id="info__width"  value=""> <br>
+    Разрешение по высоте <input id="info__height" value=""> <br>
+    Ширина рабочей области <input id="info__availWidth"  value=""> <br>
+    Высота рабочей области <input id="info__availHeight" value=""> <br>   
+    <p><a href="3.html">next page</a></p>
+    <input type="button" value="Back" id="back">
+    <script>
+        document.querySelector("input[id='btn']").onclick=function(){
+            info__width.value=window.screen.width;
+            info__height.value=window.screen.height;
+            info__availWidth.value=window.screen.availWidth;
+            info__availHeight.value=window.screen.availHeight;
+        };
+        document.querySelector("input[id='back']").onclick=function(){
+            history.back();
+        };
+    </script>
+</body>
+</html>
